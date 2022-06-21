@@ -11,5 +11,31 @@ closeBtn.addEventListener('click', () => {
 
 // slider
 
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
 const sliderImages = document.querySelectorAll('.slider-item');
-console.log(sliderImages)
+const sliderLength = sliderImages.length;
+let current = 0;
+
+function initializeSlider() {
+    document.querySelector(`[data-id = "${current}"]`).classList.add('active');
+}
+initializeSlider();
+
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
+function nextSlide() {
+    document.querySelector(`[data-id = "${current}"]`).classList.remove('active');
+    current++;
+    if (current == sliderLength) current = 0;
+    document.querySelector(`[data-id = "${current}"]`).classList.add('active');
+}
+
+function prevSlide() {
+    document.querySelector(`[data-id = "${current}"]`).classList.remove('active');
+    current--;
+    if (current == -1) current = sliderLength - 1;
+    document.querySelector(`[data-id = "${current}"]`).classList.add('active');
+}
