@@ -1,44 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | E-commerce product page</title>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div id="hamburgerBtn" class="hamburger"></div>
+        <div class="items-wrapper">
+          <div class="logo">
+            <img src="images/logo.svg" alt="logo" />
+          </div>
+          <nav class="header-nav">
+            <div id="closeBtn" class="close"></div>
+            <ul class="nav-list">
+              <li class="nav-item"><a href="#">Collections</a></li>
+              <li class="nav-item"><a href="#">Men</a></li>
+              <li class="nav-item"><a href="#">Women</a></li>
+              <li class="nav-item"><a href="#">About</a></li>
+              <li class="nav-item"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="user">
+          <div class="user-cart">
+            <img src="images/icon-cart.svg" alt="cart" />
+          </div>
+          <div class="user-avatar">
+            <img src="images/image-avatar.png" alt="avatar" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="slider">
+        <div class="slider-nav">
+          <button class="nav-btn prev">
+            <img src="images/icon-previous.svg" alt="icon-prev" />
+          </button>
+          <button class="nav-btn next">
+            <img src="images/icon-next.svg" alt="icon-next" />
+          </button>
+        </div>
+        <div class="slides">
+          <div id="slider-item-1" class="slider-item active">
+            <img src="/images/image-product-1.jpg" alt="product1" />
+          </div>
+          <div id="slider-item-2" class="slider-item">
+            <img src="/images/image-product-2.jpg" alt="product2" />
+          </div>
+          <div id="slider-item-3" class="slider-item">
+            <img src="/images/image-product-3.jpg" alt="product3" />
+          </div>
+          <div id="slider-item-4" class="slider-item">
+            <img src="/images/image-product-4.jpg" alt="product4" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
 </html>
